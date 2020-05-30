@@ -2,6 +2,7 @@
 title: Goodbye Goodbye Goodbye 
 author: Good Bie
 issue: Issue One, Summer 2020
+featured: false
 description: Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye Goodbye and Goodbye 
 category: non-fiction
 cover: cover.jpg

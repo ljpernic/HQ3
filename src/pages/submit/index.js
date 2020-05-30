@@ -3,14 +3,14 @@ import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 import Call from '../../components/Call';
 
-const Contact = props => (
-  <Layout bodyClass="page-contact">
-    <SEO title="Contact" />
+const Submit = props => (
+  <Layout bodyClass="page-submit">
+    <SEO title="Submit" />
     <div className="intro intro-small">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1>Contact</h1>
+            <h1>Submit</h1>
           </div>
         </div>
       </div>
@@ -74,4 +74,4 @@ const Contact = props => (
   </Layout>
 );
 
-export default Contact;
+export default Submit;

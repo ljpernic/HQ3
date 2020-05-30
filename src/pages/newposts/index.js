@@ -7,7 +7,7 @@ const Newposts = (props) => {
   const newposts = props.data.allMarkdownRemark.edges;
   return (
     <Layout bodyClass="page-services">
-      <SEO title="Services" />
+      <SEO title="All posts" />
       <div className="intro">
         <div className="container">
           <div className="row">
@@ -48,6 +48,7 @@ export const query = graphql`
         node {
           excerpt
           frontmatter {
+            featured
             title
             path
           }

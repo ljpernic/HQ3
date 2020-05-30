@@ -16,6 +16,24 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   id
                   frontmatter {
+                    featured
+                    path
+                    title
+                    date(formatString: "DD MMMM YYYY")
+                  }
+                  excerpt
+                }
+              }
+            }
+            fiction: allMarkdownRemark(
+              filter: { fileAbsolutePath: { regex: "/newposts/" } }
+              sort: { fields: [frontmatter___date], order: DESC }
+            ) {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    featured 
                     path
                     title
                     date(formatString: "DD MMMM YYYY")
@@ -75,6 +93,16 @@ exports.createPages = ({ graphql, actions }) => {
           }
         `,
       ).then((result) => {
+        result.data.fiction.edges.forEach(({ node }) => {
+          const component = path.resolve('src/templates/fiction.js');
+          createPage({
+            path: node.frontmatter.path,
+            component,
+            context: {
+              id: node.id,
+            },
+          });
+        });
         result.data.newposts.edges.forEach(({ node }) => {
           const component = path.resolve('src/templates/newposts.js');
           createPage({
